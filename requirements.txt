@@ -1,8 +1,10 @@
 streamlit
-psycopg2-binary
-sqlalchemy
 pandas
 python-dotenv
-flask
-gunicorn
+Flask==3.1.0
+SQLAlchemy==2.0.36
+psycopg2-binary==2.9.10
+python-dotenv==1.0.1
+gunicorn==23.0.0
+
 

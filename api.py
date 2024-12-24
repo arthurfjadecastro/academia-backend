@@ -1,13 +1,17 @@
+import os
 from flask import Flask, request, jsonify
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from app import Aluno
 
+# Carregar variáveis de ambiente
+from dotenv import load_dotenv
+load_dotenv()
+
 app = Flask(__name__)
 
 # Configuração do banco de dados
-
-DATABASE_URL = "postgresql://academia_4nhn_user:SWbkYCCkVf2qJxvM2urCdbZaTLAoIE9Y@dpg-ctj1ro52ng1s73bg4d10-a/academia_4nhn"
+DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
 
