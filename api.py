@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Configuração do banco de dados
 
-DATABASE_URL = "postgresql://academia_4nhn_user:SWbkYCCkVf2qJxvM2urCdbZaTLAoIE9Y@dpg-ctj1ro52ng1s73bg4d10-a:5432/academia_4nhn"
+DATABASE_URL = "postgresql://academia_4nhn_user:SWbkYCCkVf2qJxvM2urCdbZaTLAoIE9Y@dpg-ctj1ro52ng1s73bg4d10-a/academia_4nhn"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
 
